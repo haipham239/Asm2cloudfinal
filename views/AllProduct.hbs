@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product</title>
+    <style>
+    body {
+        background-image: url("https://i.pinimg.com/originals/2f/88/0e/2f880ef2e1761ec234bf68cba9e7f3bb.jpg") ;
+        color: seashell;
+    }
+    h1{
+        color:crimson;
+        text-align:center;
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<body>
+    <h1>All Product</h1>
+        <div>
+            <table class="table table-dark" width="60%" border="5">
+                <tr class="title" >
+                    <td>ID</td>
+                    <td>Product Name</td>
+                    <td>Category</td>
+                    <td>Price</td>
+                    <td>Update or Delete</td>
+                </tr>
+                {{# each product}}
+                <tr>
+                    <td>{{_id}}</td>
+                    <td>{{ProductName}}</td>
+                    <td>{{Category}}</td>
+                    <td>{{Price}}</td>
+                <td>
+                    <a href=" /product/edit?id={{_id}}"><input  type="submit" value="Update"></a>
+                        <a href="/product/delete?id={{_id}}"><input  type="button" value="Delete"></a>
+                    </td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+        <div class= "c">
+            <a href="/product/insert"><button class="w3-btn w3-white w3-border w3-border-red w3-round-large">Create a new product</button></a>
+            <br>
+        </div>
+</body>
+</html>

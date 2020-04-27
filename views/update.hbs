@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <style>
+    body {
+        background-image: url("https://10wallpaper.com/wallpaper/1920x1080/1106/Cherry_blossom_Tree_in_Misty_Morning_Japanese_Blossoming_cherry_tree_1920x1080.jpg") ;
+        color: seashell;
+        text-align: center;
+    }
+    h2{
+        text-align:center;
+    }
+    .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    }
+
+    .button2:hover {
+    background-color: #008CBA;
+    color: white;
+    }
+    </style>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+</head>
+<header>
+    <body>
+        <div >
+            <h2>Update Product</h2>
+            <form action="edit" enctype="multipart/form-data" method="POST">
+                <input type="hidden" name="_id" value="{{product._id}}">
+                <div class="form-group">
+                    <label for="name"></label>Product Name</label>
+                    <input type="text" name="name" value="{{product.ProductName}}">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="category"></label>Category</label>
+                    <input type="text" name="category" value="{{product.Category}}">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="price"></label>Price</label>
+                    <input type="text" name="price" value="{{product.Price}}">
+                </div>
+                <br>
+                <button type="submit"class="button button2" > Update</button>
+            </form>
+        </div>
+        </div>
+    </body>
+</header>
+
+</html>
